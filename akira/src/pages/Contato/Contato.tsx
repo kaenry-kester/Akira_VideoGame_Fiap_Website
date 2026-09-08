@@ -5,6 +5,7 @@ import AssetVermelho from '../../assets/img/Contato/Arco.png'
 import Lua from '../../assets/img/Contato/Lua.png'
 import backgroundForms from '../../assets/img/Contato/forms/Background.png'
 import borderForms from '../../assets/img/Contato/borda/BordaVermelha.png'
+import mail from '../../assets/img/Contato/Mail.png'
 
 
 export function Contato() {
@@ -14,6 +15,8 @@ export function Contato() {
             <main className="ContatoMain">
                 <img src={AssetVermelho} alt="Imagem de contato" className="Arco" />
                 <section className="SectionContato">
+                    <h1 title="Página de Contato" />
+                    <img src={mail} />
                     <h1 id="ParagrafoTitulo"> Entre em contato com nossa equipe!</h1>
                     <p id="ParagrafoContato"> Tem interesse em colaborar com o desenvolvimento do jogo para que possamos melhorá-lo e proporcionar uma melhor experiência? Fale conosco!</p>
                 </section>
@@ -26,9 +29,9 @@ export function Contato() {
                 <form action="https://formsubmit.co/luisfeliperkobelnik@gmail.com" method="POST" className="Formulario">
                     <input type="hidden" name="_subject" value="Nova mensagem do site Akira" />
                     <input type="hidden" name="_captcha" value="true" />
-                    <label htmlFor="name">Nome:</label>
+                    <label htmlFor="name">Nome completo:</label>
                     <input type="text" id="name" name="name" required />
-                    <label htmlFor="email">Email:</label>
+                    <label htmlFor="email">Seu e-mail:</label>
                     <input type="email" id="email" name="_replyto" required />
                     <label htmlFor="subject">Assunto:</label>
                     <input type="text" id="subject" name="subject" required />
@@ -37,7 +40,7 @@ export function Contato() {
                     <button type="submit" className="BotaoEnviar">Enviar Mensagem</button>
                 </form>
             </section>
-            <p> oiiii</p>
+
             <Footer />
         </div>
     )

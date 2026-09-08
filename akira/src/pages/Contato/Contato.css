@@ -39,6 +39,7 @@ main {
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  margin-bottom: 5rem;
 }
 
 .Formulario {
