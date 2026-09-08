@@ -9,10 +9,7 @@ export function Footer() {
                 <Link to="/">
                     <img src={logo} alt="Akira logo" className="logo" />
                 </Link>
-                <p>Desenvolvido como trabalho acadêmico por estudantes da </p>
-                <a href="https://www.fiap.com.br/" target="_blank" rel="noopener noreferrer">
-                    <img src="../assets/img/fiap.png" />
-                </a>
+                <p>Desenvolvido como trabalho acadêmico por estudantes da Fiap</p>
             </div>
         </footer>
     )
