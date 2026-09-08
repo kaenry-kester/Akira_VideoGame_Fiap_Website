@@ -1,6 +1,7 @@
 footer {
-  background-color: var(--background-Secondary_Color);
+  background-color: black;
   color: var(--text-Secondary_Color);
+  padding: 20px;
 }
 
 .InitialContent {
@@ -8,5 +9,5 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20rem;
+  gap: 5rem;
 }

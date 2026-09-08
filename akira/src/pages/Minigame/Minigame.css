@@ -1,3 +1,204 @@
-.MinigameImage {
-  width: 20rem;
+.minigamePage {
+  display: flex;
+  height: 100dvh;
+  flex-direction: column;
+  overflow: hidden;
+  background: #14100d;
+}
+
+.minigameArena {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #674027;
+  background-position: center;
+  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.minigameArena::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgb(24 12 5 / 0.25),
+    transparent 30%,
+    rgb(18 8 3 / 0.35)
+  );
+  content: "";
+  pointer-events: none;
+}
+
+.minigameHud {
+  position: absolute;
+  z-index: 3;
+  top: 1.2rem;
+  left: 1.5rem;
+  display: flex;
+  gap: 0.7rem;
+}
+
+.minigameHud div {
+  display: grid;
+  min-width: 5.7rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: rgb(31 15 7 / 0.68);
+  color: #fff3d7;
+  text-align: center;
+}
+
+.minigameHud span,
+.eyebrow {
+  color: #e7b76d;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.minigameHud strong {
+  font-size: 1.3rem;
+}
+
+.soundButton {
+  width: 3.2rem;
+  align-self: stretch;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: rgb(31 15 7 / 0.68);
+  color: #fff3d7;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0 0.8rem;
+}
+
+.soundButton:hover {
+  color: #e7b76d;
+}
+
+.gameOverTitle {
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+
+.gamePanel {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  width: min(90%, 30rem);
+  flex-direction: column;
+  align-items: center;
+  padding: 2.7rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: rgb(34 17 9 / 0.9);
+  box-shadow: 0 1rem 3rem rgb(25 10 2 / 0.4);
+  color: #fff3d7;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.gamePanel-playing {
+  display: none;
+}
+
+.gamePanel h1 {
+  margin: 0.35rem 0 0.65rem;
+  font-family: Montenegrin, Georgia, serif;
+  font-size: clamp(2.4rem, 7vw, 4.7rem);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.gameDescription {
+  max-width: 22rem;
+  margin: 0 0 1.5rem;
+  color: #e5d3bb;
+  line-height: 1.5;
+}
+
+.playButton {
+  border: 1px solid #e7b76d;
+  border-radius: 3px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.playButton {
+  min-width: 10rem;
+  padding: 0.85rem 1.3rem;
+  background: #b8422f;
+  color: #fff8ec;
+}
+
+.playButton:hover {
+  background: #d05a3d;
+}
+
+.thrownObject {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  will-change: transform, left, top;
+}
+
+.thrownObject > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0.5rem 1rem rgb(28 11 2 / 0.35);
+}
+
+.objectSlice {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: sliceAway 360ms ease-out forwards;
+}
+
+.objectSliceLeft {
+  clip-path: inset(0 50% 0 0);
+  transform: translate(-13px, -7px) rotate(-14deg);
+}
+
+.objectSliceRight {
+  clip-path: inset(0 0 0 50%);
+  transform: translate(13px, 7px) rotate(14deg);
+}
+
+@keyframes sliceAway {
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .minigameArena {
+    min-height: 0;
+  }
+
+  .minigameHud {
+    top: 0.8rem;
+    left: 0.8rem;
+  }
+
+  .minigameHud div {
+    min-width: 4rem;
+    padding: 0.4rem 0.6rem;
+  }
 }
