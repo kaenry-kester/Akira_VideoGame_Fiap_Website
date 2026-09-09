@@ -1,22 +1,50 @@
+.contato-page-wrapper {
+  min-height: 100vh;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.018) 0 1px,
+      transparent 1px 7px
+    ),
+    linear-gradient(145deg, #08090f 0%, #161321 52%, #090a10 100%);
+}
+
+.contato-page-wrapper .header,
+.contato-page-wrapper footer {
+  width: 100%;
+  background: #000000;
+}
+
+.contato-page {
+  margin-top: 4rem;
+}
+
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20rem;
+  background: transparent;
 }
 
 .SectionContato {
-  color: var(--text-Secondary_Color);
+  color: #eee2c7;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #ParagrafoContato {
+  color: rgba(255, 255, 255, 0.72);
   font-size: 1.2rem;
   text-align: center;
   max-width: 900px;
   margin-top: 1rem;
+}
+
+#ParagrafoTitulo {
+  color: #f0d6a3;
+  text-shadow: 0 0 1.5rem rgba(217, 154, 97, 0.18);
 }
 
 .Arco {
@@ -31,15 +59,30 @@ main {
 .SectionFormulario {
   position: relative;
   width: 66.666%;
-  margin: 0 auto;
+  margin: 4rem auto 0;
   height: 66.666dvh;
   min-height: 520px;
   overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  background: transparent;
   margin-bottom: 5rem;
+  box-shadow:
+    0 -1.5rem 2rem rgba(0, 0, 0, 0.2),
+    0 1.5rem 4rem rgba(0, 0, 0, 0.35);
+}
+
+.after::after {
+  display: block;
+  width: 5rem;
+  height: 2px;
+  margin: 2.5rem auto 0;
+  background: #a52a2d;
+  box-shadow:
+    1.5rem 0 #d99a61,
+    -1.5rem 0 #d99a61;
+  content: "";
 }
 
 .Formulario {
@@ -52,7 +95,7 @@ main {
   padding: 2.5rem;
   border-radius: 8px;
   background: transparent;
-  color: var(--text-Primary_Color);
+  color: #eee2c7;
 }
 
 .ImagemFundoFormulario {
@@ -62,7 +105,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 1;
+  opacity: 0;
 }
 
 .ImagemBordaFormulario {
@@ -81,11 +124,20 @@ main {
   box-sizing: border-box;
   width: 100%;
   padding: 0.9rem 1rem;
-  border: 1px solid black;
+  border: 0;
   border-radius: 4px;
-  background: transparent;
-  color: var(--text-Primary_Color);
+  outline: none;
+  background: rgba(8, 9, 15, 0.72);
+  color: #eee2c7;
   font: inherit;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.Formulario input:focus,
+.Formulario textarea:focus {
+  box-shadow: 0 0 0 3px rgba(217, 154, 97, 0.12);
 }
 
 .Formulario input::placeholder,
@@ -94,7 +146,7 @@ main {
 }
 
 label {
-  color: black;
+  color: #d99a61;
 }
 
 .Formulario input {
@@ -110,17 +162,21 @@ label {
   align-self: center;
   margin-top: 0.5rem;
   padding: 0.9rem 1.6rem;
-  border: 1px solid transparent;
+  border: 0;
   border-radius: 4px;
-  background-color: var(--background-Secondary_Color);
-  color: var(--text-Secondary_Color);
+  background-color: #a52a2d;
+  color: #fff5e3;
   cursor: pointer;
   font: inherit;
   font-weight: 700;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
 }
 
 .BotaoEnviar:hover {
-  background-color: var(--text-Hover_Color);
+  background-color: #c03b3e;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 700px) {
