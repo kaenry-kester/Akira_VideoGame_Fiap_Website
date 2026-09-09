@@ -10,18 +10,19 @@ import mail from '../../assets/img/Contato/Mail.png'
 
 export function Contato() {
     return (
-        <div>
+        <div className="contato-page-wrapper">
             <Header />
-            <main className="ContatoMain">
+            <main className="contato-page">
                 <img src={AssetVermelho} alt="Imagem de contato" className="Arco" />
                 <section className="SectionContato">
-                    <h1 title="Página de Contato" />
-                    <img src={mail} />
-                    <h1 id="ParagrafoTitulo"> Entre em contato com nossa equipe!</h1>
-                    <p id="ParagrafoContato"> Tem interesse em colaborar com o desenvolvimento do jogo para que possamos melhorá-lo e proporcionar uma melhor experiência? Fale conosco!</p>
+                    <img src={mail} alt="Ícone de mensagem" className="contato-mail" />
+                    <h1 id="ParagrafoTitulo">Entre em contato com nossa equipe</h1>
+                    <p id="ParagrafoContato">Tem interesse em colaborar com o desenvolvimento de Akira? Envie-nos uma mensagem! Sua opinião ajuda a tornar a experiência do jogo ainda melhor.</p>
                 </section>
                 <img src={Lua} alt="Imagem de lua" className="ImagemLua" />
             </main>
+
+            <div className="after" />
 
             <section className="SectionFormulario">
                 <img src={backgroundForms} alt="Imagem de fundo do formulário" className="ImagemFundoFormulario" />

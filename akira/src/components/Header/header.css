@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 2;
   background-color: var(--background-Tertiary_Color);
   display: flex;
   justify-content: center;
