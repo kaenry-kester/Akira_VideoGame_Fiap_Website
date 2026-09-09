@@ -7,7 +7,7 @@ export function Gameplay() {
         <div>
             <Header />
             <main>
-                <h1> Gameplay</h1>
+                <h1> Testando</h1>
             </main>
             <Footer />
         </div>
