@@ -158,7 +158,7 @@ export function Gameplay() {
                             <div>
                                 <span>01 · Sentinela</span>
                                 <h3>Worg</h3>
-                                <p>Avança em linha reta com um ataque devastador e pune ataques precipitados, aplica efeito de sangramento.</p>
+                                <p>Ataque devastador que faz o inimigo sangrar até a morte.</p>
                             </div>
                         </article>
                         <article className="enemyCard">
@@ -166,7 +166,7 @@ export function Gameplay() {
                             <div>
                                 <span>02 · Emboscador</span>
                                 <h3>Entidade aflita</h3>
-                                <p>Some no cenário e reaparece em outro ponto do cenário.</p>
+                                <p>Um ser agonizante que roga para que chegue sua hora e enfim possa deixar este mundo.</p>
                             </div>
                         </article>
                         <article className="enemyCard">
@@ -174,7 +174,7 @@ export function Gameplay() {
                             <div>
                                 <span>03 · Guardião</span>
                                 <h3>Entidade guerreira</h3>
-                                <p>Resiste a golpes frontais e controla o ritmo do combate.</p>
+                                <p>Um duelista que mesmo morto, jamais conheceu a derrota.</p>
                             </div>
                         </article>
                     </div>

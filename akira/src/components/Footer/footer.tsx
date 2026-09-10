@@ -16,7 +16,6 @@ export function Footer() {
                 <nav className="footer-nav" aria-label="Navegação do rodapé">
                     <span>Explorar</span>
                     <Link to="/">Página inicial</Link>
-                    <Link to="/sobre-o-jogo">Sobre o jogo</Link>
                     <Link to="/historia">História</Link>
                     <Link to="/gameplay">Gameplay</Link>
                     <Link to="/contato">Contato</Link>

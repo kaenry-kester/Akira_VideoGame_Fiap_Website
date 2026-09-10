@@ -12,7 +12,6 @@ export function Header() {
             <nav className="nav">
                 <ul>
                     <li><Link to="/"><p>Página inicial</p></Link></li>
-                    <li><Link to="/sobre-o-jogo"><p>Sobre o jogo</p></Link></li>
                     <li><Link to="/historia"><p>História</p></Link></li>
                     <li><Link to="/gameplay"><p>Gameplay</p></Link></li>
                     <li><Link to="/contato"><p>Contato</p></Link></li>

@@ -300,7 +300,12 @@
   margin-top: 1.5rem;
   padding: 1rem;
   border: 1px dashed rgba(217, 154, 97, 0.7);
-  background: linear-gradient(110deg, rgba(165, 42, 45, 0.16), rgba(17, 19, 27, 0.88));
+  background: linear-gradient(
+    110deg,
+    rgba(165, 42, 45, 0.16),
+    rgba(17, 19, 27, 0.88)
+  );
+  margin-top: 5rem;
 }
 
 .bossPlaceholderArtwork {
@@ -308,7 +313,13 @@
   min-height: 16rem;
   place-items: center;
   border: 1px solid rgba(240, 214, 163, 0.28);
-  background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 8px), #090a10;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.04) 0 1px,
+      transparent 1px 8px
+    ),
+    #090a10;
 }
 
 .bossPlaceholderArtwork span {
