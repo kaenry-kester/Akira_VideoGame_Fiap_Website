@@ -27,7 +27,7 @@ export function Contato() {
             <section className="SectionFormulario">
                 <img src={backgroundForms} alt="Imagem de fundo do formulário" className="ImagemFundoFormulario" />
                 <img src={borderForms} alt="Borda vermelha do formulário" className="ImagemBordaFormulario" />
-                <form action="https://formsubmit.co/luisfeliperkobelnik@gmail.com" method="POST" className="Formulario">
+                <form action="https://formsubmit.co/kaenrykester@gmail.com" method="POST" className="Formulario">
                     <input type="hidden" name="_subject" value="Nova mensagem do site Akira" />
                     <input type="hidden" name="_captcha" value="true" />
                     <label htmlFor="name">Nome completo:</label>
