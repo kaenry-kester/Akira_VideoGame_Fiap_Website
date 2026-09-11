@@ -291,6 +291,18 @@
   text-align: center;
 }
 
+.historia-note {
+  max-width: 38rem;
+  margin: 2rem auto 0 !important;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(238, 226, 199, 0.18);
+  color: rgba(255, 255, 255, 0.48);
+  font-family: Montserrat, sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
 @media (max-width: 700px) {
   .historia-page {
     padding-right: 0.5rem;
@@ -332,7 +344,8 @@
   }
 
   .historia-climax,
-  .historia-final {
+  .historia-final,
+  .historia-note {
     text-align: left;
   }
 

@@ -1,10 +1,17 @@
-@import "./header.css";
-@import "./footer.css";
-@import "./CursorTrails.css";
+:root {
+  --background-Tertiary_Color: #05060a;
+  --text-Secondary_Color: #eee2c7;
+  --text-Hover_Color: #f0d6a3;
+  --text-Active_Color: #d99a61;
+}
 
-@import "../pages/Home/App.css";
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
 
-@import "../pages/Minigame/Minigame.css";
-@import "../pages/Contato/Contato.css";
-@import "../pages/SobreOJogo/SobreOJogo.css";
-@import "../pages/Gameplay/Gameplay.css";
+body {
+  background: #0b0b0d;
+}

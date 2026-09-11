@@ -32,7 +32,7 @@ export function Historia() {
                     </div>
                     <p>Juntos, eles moldaram o mundo, ergueram o arquipélago japonês e deram origem aos primeiros povos e aos primeiros deuses, conhecidos como <em>kami</em>.</p>
 
-                    <p>O primeiro filho foi Hiruko/Ebisu, uma criança nascida sem ossos e deformada após um erro ritualístico que ocorreu durante o casamento de Izanami. Ao perceber sua criação, ela o abandonou em um barco e deixou que seu destino fosse traçado pelas águas.</p>
+                    <p>O primeiro filho foi Hiruko/Ebisu, uma criança nascida sem ossos e deformada após um erro ritualístico de Izanami. Ao perceber sua criação, ela o abandonou em um barco e deixou que seu destino fosse traçado pelas águas.</p>
 
                     <p>Mais tarde, da união entre os irmãos nasceu Kagutsuchi, o deus do fogo. Seu nascimento trouxe vida, mas também destruição. Consumida pelas chamas, Izanami morreu e desceu ao submundo, onde se tornou a deusa da morte. Lá, nomeou seu novo reino de Yami.</p>
                     <p>Tomado pela dor, Izanagi decapitou Kagutsuchi. Depois, cortou seu corpo em oito pedaços e os espalhou pelo Japão. Cada fragmento se transformou em um vulcão lendário. Do sangue derramado nasceram novos <em>kami</em>, associados aos trovões, às montanhas e aos metais. O coração de Kagutsuchi, porém, foi enterrado e esquecido por milênios.</p>
@@ -94,6 +94,7 @@ export function Historia() {
                     <p>A cada deus derrotado, uma arma ancestral será recuperada. A cada arma purificada, parte da cor perdida do mundo retornará.</p>
                     <p>Mas a jornada não termina quando todas as armas forem recuperadas. Akira ainda precisará voltar para Hinogawa, onde o espírito de Izanagi estará esperando pelo juízo final.</p>
                     <p className="historia-final">A Lua de Sangue está no céu. A profecia está começando...</p>
+                    <p className="historia-note">Esta história é baseada em elementos da mitologia japonesa. Por se tratar de uma obra inspirada nessas tradições, alguns personagens, eventos e detalhes podem apresentar alterações criativas.</p>
                 </article>
             </main>
             <Footer />

@@ -4,36 +4,27 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Montenegrin";
-  font-style: normal;
   src: url(../../assets/fonts/MontenegrinGothicOne-Regular.ttf);
+  font-style: normal;
   font-display: swap;
 }
 
-html,
-body,
-#root {
-  margin: 0;
-  width: 100%;
-  min-height: 100%;
-  background: var(--background-Primary_Color);
-  font-family: Arial, sans-serif;
+.homePage {
+  background: #0b0b0d;
+  color: #f1e7d5;
+  overflow: hidden;
 }
-
-:root {
-  --background-Primary_Color: #0d112c;
-  --background-Secondary_Color: #711719;
-  --background-Tertiary_Color: #0d0d0d;
-  --background-Fourth_Color: #ffffff;
-
-  --text-Primary_Color: #000000f0;
-  --text-Secondary_Color: #ffffff;
-  --text-Hover_Color: #b90e10;
-  --text-Active_Color: #e06062;
+.homePage main {
+  background:
+    radial-gradient(
+      circle at 78% 8%,
+      rgba(154, 42, 38, 0.2),
+      transparent 32rem
+    ),
+    #0b0b0d;
 }
-
 .cursor-trail {
   position: fixed;
   inset: 0;
@@ -43,26 +34,342 @@ body,
   pointer-events: none;
   z-index: 999;
 }
-
-.phrase {
-  color: var(--text-Secondary_Color);
-  font-family: "Montenegrin", sans-serif;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
+.homeHero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.9fr) minmax(20rem, 1.1fr);
+  align-items: center;
+  gap: 3rem;
+  max-width: 86rem;
+  min-height: min(45rem, calc(100vh - 5rem));
+  margin: 0 auto;
+  padding: 5rem 5vw 4rem;
+  box-sizing: border-box;
+  isolation: isolate;
 }
-
-.imageSection {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
+.heroAtmosphere {
+  position: absolute;
+  z-index: -1;
+  width: 38rem;
+  height: 38rem;
+  right: 2%;
+  top: 4%;
+  border: 1px solid rgba(213, 154, 97, 0.18);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 4rem rgba(165, 42, 45, 0.04),
+    0 0 0 9rem rgba(165, 42, 45, 0.025);
 }
-
-.symbol {
+.homeHeroCopy {
+  max-width: 34rem;
+  animation: homeRise 0.8s ease both;
+}
+.homeEyebrow,
+.homeSectionLabel {
+  color: #d99a61;
+  font:
+    700 0.7rem/1.3 Montserrat,
+    sans-serif;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+.homeHero h1 {
+  margin: 0.8rem 0 1rem;
+  color: #f4d6a0;
+  font:
+    400 clamp(4.5rem, 11vw, 8.5rem)/0.85 Montenegrin,
+    Georgia,
+    serif;
+  letter-spacing: 0;
+}
+.heroQuote {
+  max-width: 26rem;
+  margin: 0;
+  color: #eee2c7;
+  font:
+    400 clamp(1.1rem, 2vw, 1.45rem)/1.4 Montenegrin,
+    Georgia,
+    serif;
+}
+.heroLead {
+  max-width: 31rem;
+  margin: 1.5rem 0 0;
+  color: rgba(255, 255, 255, 0.65);
+  font:
+    400 0.95rem/1.8 Montserrat,
+    sans-serif;
+}
+.heroActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.homeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-height: 3rem;
+  padding: 0 1.15rem;
+  box-sizing: border-box;
+  font:
+    700 0.7rem/1 Montserrat,
+    sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+.homeButton:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+.homeButton--primary {
+  background: #a52a2d;
+  color: #fff;
+}
+.homeButton--primary:hover {
+  background: #c3403e;
+}
+.homeButton--quiet {
+  border-bottom: 1px solid rgba(238, 226, 199, 0.4);
+  color: #eee2c7;
+}
+.homeHeroArt {
+  position: relative;
+  max-width: 45rem;
+  justify-self: end;
+  animation: homeReveal 1s 0.1s ease both;
+}
+.homeHeroArt > img {
+  display: block;
+  width: min(100%, 45rem);
+  max-height: 34rem;
   object-fit: contain;
-  width: 10rem;
+  object-position: right center;
+  filter: saturate(0.86) contrast(1.06);
 }
-
-.image {
-  width: 30rem;
+.heroSeal {
+  position: absolute;
+  right: 2%;
+  bottom: 3%;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #d99a61;
+  font:
+    700 0.62rem/1.35 Montserrat,
+    sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.heroSeal img {
+  width: 3.5rem;
+  opacity: 0.72;
+}
+.scrollCue {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 5vw;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(255, 255, 255, 0.38);
+  font:
+    600 0.58rem/1 Montserrat,
+    sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.scrollCue span {
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: #a52a2d;
+}
+.homeManifesto,
+.homePillars,
+.homeClosing {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 7rem 5vw;
+}
+.manifestoLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  margin-top: 1.2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(238, 226, 199, 0.18);
+}
+.manifestoLayout h2,
+.homeClosing h2 {
+  margin: 0;
+  color: #eee2c7;
+  font:
+    400 clamp(2.4rem, 5vw, 4.7rem)/1.05 Montenegrin,
+    Georgia,
+    serif;
+}
+.manifestoLayout h2 em,
+.homeClosing h2 em {
+  color: #a52a2d;
+  font-style: normal;
+}
+.manifestoLayout p {
+  max-width: 29rem;
+  margin: 0.4rem 0 1.8rem;
+  color: rgba(255, 255, 255, 0.62);
+  font:
+    400 1rem/1.9 Montserrat,
+    sans-serif;
+}
+.textLink {
+  color: #d99a61;
+  font:
+    700 0.7rem/1 Montserrat,
+    sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.homePillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding-top: 1rem;
+}
+.homePillar {
+  position: relative;
+  min-height: 19rem;
+  padding: 1.5rem;
+  border-top: 2px solid rgba(238, 226, 199, 0.18);
+  background: #131216;
+  box-sizing: border-box;
+}
+.homePillar--featured {
+  border-top-color: #a52a2d;
+  background: linear-gradient(150deg, #27171a, #131216 68%);
+}
+.pillarNumber {
+  color: #d99a61;
+  font:
+    700 0.68rem/1 Montserrat,
+    sans-serif;
+  letter-spacing: 0.15em;
+}
+.homePillar img {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 2.2rem 0 1.7rem;
+  object-fit: contain;
+  opacity: 0.68;
+}
+.homePillar h3 {
+  margin: 0 0 0.7rem;
+  color: #eee2c7;
+  font:
+    400 1.6rem/1.1 Montenegrin,
+    Georgia,
+    serif;
+}
+.homePillar p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.56);
+  font:
+    400 0.88rem/1.7 Montserrat,
+    sans-serif;
+}
+.homeClosing {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  text-align: center;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(165, 42, 45, 0.18),
+    transparent 60%
+  );
+}
+.homeClosing h2 {
+  margin: 1rem auto 2.2rem;
+}
+@keyframes homeRise {
+  from {
+    opacity: 0;
+    transform: translateY(1.2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes homeReveal {
+  from {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 800px) {
+  .homeHero {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-top: 4rem;
+  }
+  .homeHeroArt {
+    justify-self: center;
+    width: min(100%, 34rem);
+  }
+  .homeHeroArt > img {
+    max-height: 24rem;
+  }
+  .heroSeal {
+    right: 0;
+  }
+  .manifestoLayout {
+    gap: 2rem;
+  }
+}
+@media (max-width: 560px) {
+  .homeHero {
+    min-height: auto;
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+  }
+  .homeHero h1 {
+    font-size: 5.3rem;
+  }
+  .heroQuote {
+    font-size: 1.05rem;
+  }
+  .homeHeroArt {
+    margin-top: 1rem;
+  }
+  .heroAtmosphere {
+    width: 22rem;
+    height: 22rem;
+    top: 42%;
+    right: -18%;
+  }
+  .manifestoLayout,
+  .homePillars {
+    grid-template-columns: 1fr;
+  }
+  .homeManifesto,
+  .homePillars,
+  .homeClosing {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .homePillar {
+    min-height: 15rem;
+  }
+  .scrollCue {
+    display: none;
+  }
 }

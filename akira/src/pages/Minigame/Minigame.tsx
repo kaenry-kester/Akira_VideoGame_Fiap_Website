@@ -2,15 +2,22 @@ import { Header } from '../../components/Header/header.tsx'
 import { Footer } from '../../components/Footer/footer.tsx'
 import './Minigame.css'
 import BackgroundWood from '../../assets/img/background_Wood.png'
-import GameObjectAsset from '../../assets/img/inimigo1.png'
+import enemyOne from '../../assets/img/minigame/1Iimigos_Akira.png'
+import enemyTen from '../../assets/img/minigame/10Iimigos_Akira.png'
+import enemyTwentyOne from '../../assets/img/minigame/21Inimigos_Akira.png'
+import enemyOni from '../../assets/img/minigame/onihashimanSprite-0002 copy.png'
+import enemyVariant from '../../assets/img/minigame/111111.png'
 import CutSoundAsset from '../../songs/Cut.mp3'
 import MusicSoundAsset from '../../songs/Music.mp3'
 import { useEffect, useRef, useState } from 'react'
+
+const gameObjectAssets = [enemyOne, enemyTen, enemyTwentyOne, enemyOni, enemyVariant]
 
 type GameStatus = 'ready' | 'playing' | 'finished'
 
 type GameObject = {
     id: number
+    image: string
     x: number
     y: number
     vx: number
@@ -33,6 +40,7 @@ export function Minigame() {
     const lastThrowRef = useRef(0)
     const gameStartRef = useRef(0)
     const nextIdRef = useRef(0)
+    const assetQueueRef = useRef<string[]>([])
     const audioContextRef = useRef<AudioContext | null>(null)
     const musicRef = useRef<HTMLAudioElement | null>(null)
     const [status, setStatus] = useState<GameStatus>('ready')
@@ -41,7 +49,20 @@ export function Minigame() {
     const [misses, setMisses] = useState(0)
     const [elapsedSeconds, setElapsedSeconds] = useState(0)
     const [soundEnabled, setSoundEnabled] = useState(true)
-    const objectImage = GameObjectAsset
+
+    const shuffleAssets = () => {
+        const shuffledAssets = [...gameObjectAssets]
+        for (let index = shuffledAssets.length - 1; index > 0; index -= 1) {
+            const swapIndex = Math.floor(Math.random() * (index + 1))
+            ;[shuffledAssets[index], shuffledAssets[swapIndex]] = [shuffledAssets[swapIndex], shuffledAssets[index]]
+        }
+        assetQueueRef.current = shuffledAssets
+    }
+
+    const getNextAsset = () => {
+        if (assetQueueRef.current.length === 0) shuffleAssets()
+        return assetQueueRef.current.shift() ?? gameObjectAssets[0]
+    }
 
     const getAudioContext = () => {
         if (!audioContextRef.current) audioContextRef.current = new AudioContext()
@@ -107,6 +128,7 @@ export function Minigame() {
         pointerRef.current.active = false
         lastThrowRef.current = 0
         gameStartRef.current = performance.now()
+        shuffleAssets()
         setObjects([])
         setScore(0)
         setMisses(0)
@@ -197,6 +219,7 @@ export function Minigame() {
                 for (let assetIndex = 0; assetIndex < assetsToThrow; assetIndex += 1) {
                     objectsRef.current.push({
                         id: nextIdRef.current++,
+                        image: getNextAsset(),
                         x: size + Math.random() * Math.max(1, width - size * 2),
                         y: height + size,
                         vx: (Math.random() - 0.5) * width * 0.12,
@@ -303,11 +326,11 @@ export function Minigame() {
                     >
                         {gameObject.sliced ? (
                             <>
-                                <img className="objectSlice objectSliceLeft" src={objectImage} alt="Objeto cortado" />
-                                <img className="objectSlice objectSliceRight" src={objectImage} alt="Objeto cortado" />
+                                <img className="objectSlice objectSliceLeft" src={gameObject.image} alt="Inimigo cortado" />
+                                <img className="objectSlice objectSliceRight" src={gameObject.image} alt="Inimigo cortado" />
                             </>
                         ) : (
-                            <img src={objectImage} alt="Objeto para cortar" />
+                            <img src={gameObject.image} alt="Inimigo para cortar" />
                         )}
                     </div>
                 ))}

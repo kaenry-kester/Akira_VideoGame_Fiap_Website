@@ -1,15 +1,17 @@
 .minigamePage {
   display: flex;
-  height: 100dvh;
+  min-height: 100dvh;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: #14100d;
 }
 
 .minigameArena {
   position: relative;
-  flex: 1;
-  min-height: 0;
+  flex: 0 0 82dvh;
+  height: 82dvh;
+  min-height: 29rem;
   overflow: hidden;
   isolation: isolate;
   background-color: #674027;
@@ -189,7 +191,9 @@
 
 @media (max-width: 650px) {
   .minigameArena {
-    min-height: 0;
+    flex-basis: 78dvh;
+    height: 78dvh;
+    min-height: 25rem;
   }
 
   .minigameHud {
