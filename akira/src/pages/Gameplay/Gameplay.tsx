@@ -151,7 +151,7 @@ export function Gameplay() {
                 <section className="gameplaySection enemiesSection">
                     <div className="sectionHeading">
                         <p className="gameplayKicker">Ameaças do caminho</p>
-                        <h2>Leia o inimigo antes de atacar</h2>
+                        <h2>Analise cada movimento do inimigo antes de atacar</h2>
                         <p>Cada criatura possui um ritmo próprio. Observe seus padrões, use o cenário e o tempo a seu favor e escolha a arma certa para o confronto.</p>
                     </div>
                     <div className="enemiesGrid">

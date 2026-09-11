@@ -29,7 +29,7 @@ export default function App() {
 
         <section className="homeManifesto">
           <div className="manifestoLayout">
-            <h2>Uma terra viva.<br /><em>Uma maldição antiga.</em></h2>
+            <h2><em>Uma maldição antiga.</em></h2>
             <div>
               <p>Você é o último descendente de Yamato, uma linhagem capaz de purificar as armas que condenaram o Japão. Seu retorno a Hinogawa inicia uma jornada que foi iniciada por seus ancestrais, e cabe à você, derrotar divindades épicas e colocar um fim na maldição que dominou o Japão.</p>
               <a className="textLink" href="/historia">Ler a história completa <span aria-hidden="true">↗</span></a>
