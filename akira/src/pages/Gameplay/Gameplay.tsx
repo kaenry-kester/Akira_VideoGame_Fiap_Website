@@ -47,7 +47,7 @@ export function Gameplay() {
                         <article className="mechanicCard">
                             <span>01</span>
                             <h3>Caminho para casa</h3>
-                            <p>Enfrente os desafios do mundo de Akira com estratégia e atenção. As armas conquistadas ampliam sua mobilidade e lhe dão habilidades únicas: o bastão permite saltos mais longos, enquanto a Kusarigama ajuda a escalar e alcançar novas áreas. Estes são apenas alguns das diversas habilidades desbloqueadas, cabe ao jogador buscar por todas elas.</p>
+                            <p>Enfrente os desafios no mundo de Akira com estratégia e atenção. As armas conquistadas ampliam sua mobilidade e lhe dão habilidades únicas: o bastão permite saltos mais longos, enquanto a Kusarigama ajuda a escalar e alcançar novas áreas. Estes são apenas alguns das diversas habilidades desbloqueadas, cabe ao jogador buscar por todas elas.</p>
                         </article>
                         <article className="mechanicCard">
                             <span>02</span>
