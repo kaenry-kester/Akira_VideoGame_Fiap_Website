@@ -248,7 +248,7 @@
   flex: 0 0 12rem;
   display: grid;
   place-items: center;
-  padding: 1rem;
+  padding: 0;
   border-top: 2px solid #a52a2d;
   background: #090a10;
 }
@@ -327,6 +327,19 @@
   font-family: Montenegrin, Georgia, serif;
   font-size: 8rem;
   font-weight: 400;
+}
+
+.bossPlaceholderArtwork img {
+  display: block;
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.bossCard--revealed .bossPlaceholderArtwork img {
+  width: 70%;
+  height: 70%;
 }
 
 .bossPlaceholderCopy .gameplayKicker {

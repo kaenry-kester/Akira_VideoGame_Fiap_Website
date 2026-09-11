@@ -17,6 +17,8 @@ import kusarigama from '../../assets/img/Gameplay/armas/KUSARIGAMA.png'
 import enemyOne from '../../assets/img/Gameplay/Inimigos/1Iimigos_Akira.png'
 import enemyTen from '../../assets/img/Gameplay/Inimigos/10Iimigos_Akira.png'
 import enemyTwentyOne from '../../assets/img/Gameplay/Inimigos/21Inimigos_Akira.png'
+import oni from '../../assets/img/Gameplay/Inimigos/onihashimanSprite-0002.png'
+import hashiman from '../../assets/img/Gameplay/Inimigos/hashimanSprite-0002.png'
 
 export function Gameplay() {
     return (
@@ -177,14 +179,22 @@ export function Gameplay() {
                                 <p>Um duelista que mesmo morto, jamais conheceu a derrota.</p>
                             </div>
                         </article>
+                        <article className="enemyCard">
+                            <div className="enemyArtwork"><img src={oni} alt="Oni, criatura corrompida" /></div>
+                            <div>
+                                <span>04 · Yokai</span>
+                                <h3>Oni</h3>
+                                <p>Um ser corrompido que serve aos seres divinos, uma fera incontrolável capaz de suportar qualquer coisa.</p>
+                            </div>
+                        </article>
                     </div>
-                    <article className="bossPlaceholder">
-                        <div className="bossPlaceholderArtwork" aria-hidden="true"><span>H</span></div>
+                    <article className="bossPlaceholder bossCard bossCard--revealed">
+                        <div className="bossPlaceholderArtwork"><img src={hashiman} alt="Hashiman, deus corrompido da guerra" /></div>
                         <div className="bossPlaceholderCopy">
                             <p className="gameplayKicker">Primeiro confronto</p>
-                            <h2>Hachiman</h2>
-                            <p>O primeiro boss será revelado aqui. Este espaço foi reservado para sua arte, sua arena e os padrões de combate que testarão tudo o que você aprendeu sobre armas, mobilidade e leitura de inimigos.</p>
-                            <span className="bossStatus">Chefe em desenvolvimento</span>
+                            <h2>Hashiman</h2>
+                            <p>Deus da guerra e protetor dos samurais. Empunhou o arco e a flecha para defender seu povo durante guerras cada vez mais violentas, mas acabou consumido pelo poder da arma.</p>
+                            <span className="bossStatus">Arco e flecha</span>
                         </div>
                     </article>
                     <article className="bossPlaceholder">
@@ -192,8 +202,8 @@ export function Gameplay() {
                         <div className="bossPlaceholderCopy">
                             <p className="gameplayKicker">Segundo confronto</p>
                             <h2>Jizō</h2>
-                            <p>Espaço reservado para a arte, a arena e os padrões de combate do segundo boss. Seus ataques devem exigir domínio de mobilidade e leitura do cenário.</p>
-                            <span className="bossStatus">Chefe em desenvolvimento</span>
+                            <p>Inimigo em desenvolvimento...</p>
+                            <span className="bossStatus">Bo</span>
                         </div>
                     </article>
                     <article className="bossPlaceholder">
@@ -201,8 +211,8 @@ export function Gameplay() {
                         <div className="bossPlaceholderCopy">
                             <p className="gameplayKicker">Terceiro confronto</p>
                             <h2>Inari</h2>
-                            <p>Espaço reservado para a arte, a arena e os padrões de combate do terceiro boss. Este confronto marcará uma nova etapa na jornada de Akira.</p>
-                            <span className="bossStatus">Chefe em desenvolvimento</span>
+                            <p>Inimigo em desenvolvimento...</p>
+                            <span className="bossStatus">Kusarigama</span>
                         </div>
                     </article>
                 </section>
