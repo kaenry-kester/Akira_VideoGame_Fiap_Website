@@ -69,7 +69,7 @@ export function Historia() {
                         <li>
                             <figure className="historia-god-card">
                                 <img src={inari} alt="Inari, deusa da fertilidade e da prosperidade" />
-                                <figcaption><strong>Inari:</strong> Deusa da fertilidade, da prosperidade, da riqueza e da sorte. Capaz de se transformar em raposa e em humana, protetora de ferreiros e guerreiros, empunhou a <em>kusarigama</em> para resgatar Yamato, pois sabia o que a aguardava. Apesar de sua resistência, foi presa, torturada e possuída por Izanagi, tornando-se uma divindade controlada pelo próprio deus da criação. <small className="historia-credit">Créditos: Azurfrog: https://commons.wikimedia.org/wiki/User:Azurfrog</small></figcaption>
+                                <figcaption><strong>Inari:</strong> Deusa da fertilidade, da prosperidade, da riqueza e da sorte. Capaz de se transformar em raposa e em humana, protetora de ferreiros e guerreiros, empunhou a <em>kusarigama</em> para resgatar Yamato, pois sabia o que o aguardava. Apesar de sua resistência, foi presa, torturada e possuída por Izanagi, tornando-se uma divindade controlada pelo próprio deus da criação. <small className="historia-credit">Créditos: Azurfrog: https://commons.wikimedia.org/wiki/User:Azurfrog</small></figcaption>
                             </figure>
                         </li>
                     </ul>
