@@ -1,10 +1,8 @@
-# akira_Website
+Para divulgação de Akira, jogo na qual está sendo desenvolvido por fins acadêmicos no curso de Desenvolvimento de jogos na Universidade Fiap possui uma pegada pixel-art no estilo side-scrolling, com combates dinâmicos e estratégia à cada fase. Foi desenvolvido um site, em React com type script visando aprimorar meus conhecimentos em desenvolvimento de sites. Por se tratar de um projeto na qual estou iniciando meus conhecimentos, houve o uso de IA para auxílio no desenvolvimento em algumas sessões, ao exemplo do minigame, simulando o antigo "Fruit ninja", mantendo a temática do jogo e criando uma mecânica enolvente à primeira impressão para com nosso Universo. Outra funcionalidade na qual houve um suporte de Inteligência Artificial, foi a personalização do cursor, para gerar um efeito semelhante ao corte de uma espada.
 
-Akira, jogo na qual está sendo desenvolvido por fins acadêmicos no curso de Desenvolvimento de jogos na Universidade Fiap possui uma pegada pixel-art no estilo side-scrolling, com combates dinâmicos e estratégia à cada fase.
+
 
 Para as imagens, além de pertencerem à classificação Creative Comons, foram fornecidos créditos aos artistas, mesmo que o site não seta um projeto com o intuito de gerar lucros, mas sim divulgar um trabalho acadêmico. 
-
-Para divulgação do jogo, foi desenvolvido um site, em React com type script visando aprimorar meus conhecimentos em desenvolvimento de sites. Por se tratar de um projeto na qual estou iniciando meus conhecimentos, houve o uso de IA para auxílio no desenvolvimento em algumas sessões, ao exemplo do minigame, simulando o antigo "Fruit ninja", mantendo a temática do jogo e criando uma mecânica enolvente à primeira impressão para com nosso Universo. Outra funcionalidade na qual houve um suporte de Inteligência Artificial, foi a personalização do cursor, para gerar um efeito semelhante ao corte de uma espada.
 
 Mesmo que recursos de IA tenham sido utilizados, não anula os fins educacionais e de aprendizado, firmo que serviram de grande aprendizado para projetos futuros.
 
