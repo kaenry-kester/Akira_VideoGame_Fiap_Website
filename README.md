@@ -1,9 +1,32 @@
-Para divulgação de Akira, jogo na qual está sendo desenvolvido por fins acadêmicos no curso de Desenvolvimento de jogos na Universidade Fiap possui uma pegada pixel-art no estilo side-scrolling, com combates dinâmicos e estratégia à cada fase. Foi desenvolvido um site, em React com type script visando aprimorar meus conhecimentos em desenvolvimento de sites. Por se tratar de um projeto na qual estou iniciando meus conhecimentos, houve o uso de IA para auxílio no desenvolvimento em algumas sessões, ao exemplo do minigame, simulando o antigo "Fruit ninja", mantendo a temática do jogo e criando uma mecânica enolvente à primeira impressão para com nosso Universo. Outra funcionalidade na qual houve um suporte de Inteligência Artificial, foi a personalização do cursor, para gerar um efeito semelhante ao corte de uma espada.
+# React + TypeScript + Vite
 
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
+Currently, two official plugins are available:
 
-Para as imagens, além de pertencerem à classificação Creative Comons, foram fornecidos créditos aos artistas, mesmo que o site não seta um projeto com o intuito de gerar lucros, mas sim divulgar um trabalho acadêmico. 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Mesmo que recursos de IA tenham sido utilizados, não anula os fins educacionais e de aprendizado, firmo que serviram de grande aprendizado para projetos futuros.
+## React Compiler
 
-Por último, caso queira nos ajudar com o desenvolvimento de josso jogo, pedimos que nos envie um e-mail na página de "Contato" sugerindo as melhorias e críticas construtivas para que consigamos criar um jogo cada vez melhor para o público.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
+
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
