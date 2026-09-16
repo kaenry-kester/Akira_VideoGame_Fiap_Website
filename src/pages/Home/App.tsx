@@ -1,15 +1,33 @@
+import { useEffect, useState } from 'react'
 import './App.css'
 import { Header } from '../../components/Header/header.tsx'
 import { Footer } from '../../components/Footer/footer.tsx'
 import CursorTrails from '../../components/CursorTrail/CursorTrails.tsx'
 import image from '../../assets/img/image.png'
 import symbol from '../../assets/img/symbol.png'
+import ungrowLogo from '../../assets/img/logo_ungrow_branca.png'
 
 export default function App() {
+  const [isPartnerPopupVisible, setIsPartnerPopupVisible] = useState(true)
+
+  useEffect(() => {
+    const popupTimer = window.setTimeout(() => {
+      setIsPartnerPopupVisible(false)
+    }, 7000)
+
+    return () => window.clearTimeout(popupTimer)
+  }, [])
+
   return (
     <div className="homePage">
       <CursorTrails />
       <Header />
+      {isPartnerPopupVisible && (
+        <aside className="partnerPopup" aria-label="Conheça mais sobre nossos colegas desenvolvedores">
+          <img src={ungrowLogo} alt="Ungrow" className="ungrow" />
+          <p>Conheça mais sobre o projeto de nossos colegas </p>
+        </aside>
+      )}
       <main>
         <section className="homeHero">
           <div className="heroAtmosphere" />
@@ -18,8 +36,9 @@ export default function App() {
             <p className="heroQuote">"Meus passos já sabem o caminho, e todos eles me levam de volta para casa..."</p>
             <p className="heroLead">A Lua de Sangue despertou, e com isso, uma profecia está para se cumprir...</p>
             <div className="heroActions">
-              <a className="homeButton homeButton--primary" href="/historia">Descubra sobre o passado <span aria-hidden="true">↗</span></a>
+              <a className="homeButton homeButton--quiet" href="/historia">Descubra sobre o passado <span aria-hidden="true">↗</span></a>
               <a className="homeButton homeButton--quiet" href="/gameplay">Ver tela de gameplay <span aria-hidden="true">→</span></a>
+              <a className="homeButton homeButton--quiet" href="https://youtu.be/xQPChuhhcrg?si=7bsYGfbKouoPG0dm" target="_blank" rel="noreferrer">Conheça mais sobre nosso jogo <span aria-hidden="true">↗</span></a>
             </div>
           </div>
           <div className="homeHeroArt">

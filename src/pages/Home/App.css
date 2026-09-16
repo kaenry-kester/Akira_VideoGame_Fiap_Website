@@ -34,6 +34,43 @@
   pointer-events: none;
   z-index: 999;
 }
+.partnerPopup {
+  position: fixed;
+  z-index: 20;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  display: grid;
+  width: min(15rem, calc(100vw - 2rem));
+  padding: 1rem;
+  border: 1px solid rgba(238, 226, 199, 0.24);
+  background: #171519;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.38);
+  box-sizing: border-box;
+  animation: partnerPopupReveal 0.45s ease both;
+}
+.partnerPopup::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0.2rem;
+  background: #a52a2d;
+  content: "";
+}
+.partnerPopup img {
+  width: min(6rem, 70%);
+  max-height: 2.5rem;
+  margin: 0.35rem 0 0.9rem;
+  object-fit: contain;
+  object-position: left center;
+}
+.partnerPopup p {
+  max-width: 13rem;
+  margin: 0;
+  color: #eee2c7;
+  font:
+    400 0.9rem/1.4 Montenegrin,
+    Georgia,
+    serif;
+}
 .homeHero {
   position: relative;
   display: grid;
@@ -109,6 +146,8 @@
 .homeButton {
   display: inline-flex;
   align-items: center;
+  justify-content: space-between;
+  width: 18rem;
   gap: 1.25rem;
   min-height: 3rem;
   padding: 0 1.15rem;
@@ -136,6 +175,7 @@
 .homeButton--quiet {
   border-bottom: 1px solid rgba(238, 226, 199, 0.4);
   color: #eee2c7;
+  width: 100rem;
 }
 .homeHeroArt {
   position: relative;
@@ -315,6 +355,16 @@
     transform: translateX(0);
   }
 }
+@keyframes partnerPopupReveal {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media (max-width: 800px) {
   .homeHero {
     grid-template-columns: 1fr;
@@ -336,6 +386,14 @@
   }
 }
 @media (max-width: 560px) {
+  .heroActions .homeButton {
+    width: 100%;
+  }
+  .partnerPopup {
+    right: 1rem;
+    bottom: 1rem;
+    width: calc(100vw - 2rem);
+  }
   .homeHero {
     min-height: auto;
     padding-top: 3.5rem;
